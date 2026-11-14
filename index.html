@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#f5f6fb" />
+  <meta name="description" content="A cozy family calendar, tasks, meals and more — all in one planner." />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="DayBloom" />
+  <link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png" />
+  <link rel="apple-touch-icon" href="./icon-192.png" />
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="stylesheet" href="./styles.css" />
+  <title>DayBloom — Family Planner</title>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Planner navigation">
+      <div class="brand"><span class="brand-icon">✿</span><span><strong>daybloom</strong><small>our family space</small></span></div>
+      <div class="sidebar-card"><div class="sun-icon">☀️</div><div class="sidebar-card-title">Make today a good day</div><div class="sidebar-card-sub">Little moments, beautifully organized.</div></div>
+      <div class="nav-caption">WORKSPACE</div>
+      <nav id="sideNav" class="side-nav">
+        <button data-nav="calendar" class="active"><span>🗓️</span> Calendar</button>
+        <button data-nav="tasks"><span>☑️</span> Tasks <span class="nav-count" id="pendingCount"></span></button>
+        <button data-nav="meals"><span>🥗</span> Meals</button>
+        <button data-nav="lists"><span>📝</span> Lists</button>
+        <button data-nav="rewards"><span>⭐</span> Rewards</button>
+        <button data-nav="sleep"><span>🌙</span> Sleep</button>
+        <button data-nav="photos"><span>🖼️</span> Photos</button>
+      </nav>
+      <div class="sidebar-bottom"><button class="settings-link" data-nav="settings">⚙️ <span>Settings</span></button><div class="privacy-note">🔒 Saved on this device</div></div>
+    </aside>
+    <div class="main-layout">
+      <header class="topbar">
+        <div class="topbar-left"><span class="mobile-flower">✿</span><div><span class="eyebrow">YOUR FAMILY PLANNER</span><div id="clockDate" class="clock-date"></div></div></div>
+        <div class="topbar-actions"><span id="clockTime" class="clock-time"></span><button class="btn btn-primary" id="headerAdd">＋ <span>Add new</span></button></div>
+      </header>
+      <main class="main-content">
+        <section class="welcome-strip"><div><div class="greeting" id="greeting">Hello, sunshine ☀️</div><div class="greeting-sub">Here's what's happening in your happy little corner.</div></div><div class="decor-star">✳</div></section>
+        <section id="familyOverview" class="people-row" aria-label="Family members"></section>
+        <div id="content"></div>
+      </main>
+    </div>
+  </div>
+  <nav class="bottom-nav" id="bottomNav" aria-label="Mobile planner navigation">
+    <button data-nav="calendar" class="active"><span>🗓️</span>Calendar</button>
+    <button data-nav="tasks"><span>☑️</span>Tasks</button>
+    <button data-nav="meals"><span>🥗</span>Meals</button>
+    <button data-nav="lists"><span>📝</span>Lists</button>
+    <button data-nav="settings"><span>⚙️</span>More</button>
+  </nav>
+  <button class="fab" id="fabAdd" title="Add new item" aria-label="Add new item">+</button>
+  <dialog id="editorDialog" class="editor-dialog"><div class="modal-wrap"><header class="modal-head"><div><div class="eyebrow">DAYBLOOM</div><h2 id="modalTitle">Add an item</h2></div><button type="button" class="icon-btn close-modal" id="closeModal" aria-label="Close">✕</button></header><form id="editorForm"></form></div></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <input type="file" id="importFile" accept="application/json,.json" hidden />
+  <input type="file" id="photoFile" accept="image/*" hidden />
+  <script src="./app.js" defer></script>
+</body>
+</html>
