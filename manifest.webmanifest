@@ -1,8 +1,8 @@
 {
   "id": "./",
-  "name": "DayBloom — Family Planner",
+  "name": "DayBloom — Personal Planner",
   "short_name": "DayBloom",
-  "description": "A pretty, personal family calendar and daily planner.",
+  "description": "Your personal calendar, tasks, goals, meals and lists, all in one place.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",

@@ -9,3 +9,64 @@
 .family-get-started .get-started-icon{font-size:26px}
 .family-get-started .btn{margin-left:auto;flex:none}
 @media(max-width:700px){.family-get-started{min-width:100%;flex-wrap:wrap}.family-get-started .btn{margin-left:0;width:100%}}
+
+/* DayBloom Personal Planner */
+.dashboard-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:0 0 21px}
+.dashboard-stat{position:relative;min-height:137px;padding:20px;border-radius:16px;overflow:hidden}
+.dashboard-stat.pink{background:#ffe3e7}.dashboard-stat.mint{background:#dcf4ed}.dashboard-stat.yellow{background:#fff1cc}.dashboard-stat.lavender{background:#eee5fc}
+.dashboard-stat .stat-emoji{position:absolute;top:15px;right:17px;font-size:25px;opacity:.8}
+.dashboard-stat .stat-number{font-size:34px;color:#344257;margin-top:13px}
+.dashboard-stat .stat-caption{font-size:12px;color:#6f7e91;line-height:1.45;max-width:160px}
+.dashboard-columns,.dashboard-lower{margin-bottom:18px}
+.dashboard-panel{min-height:255px;display:flex;flex-direction:column}
+.panel-top{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:17px}
+.panel-top h2{font-size:16px;font-weight:800;letter-spacing:-.25px;margin:0}
+.text-action{background:transparent;border:0;padding:5px 2px;color:#6477e3;font-size:12px;font-weight:750;white-space:nowrap}
+.panel-footer{margin-top:auto;padding-top:17px}
+.dashboard-task{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid #eff1f6}
+.dashboard-task .task-title,.dashboard-event .task-title{display:block;font-size:13px}
+.dashboard-task .task-meta,.dashboard-event .task-meta{display:block;margin-top:5px}
+.dashboard-event{--tint:#eee3ff;--accent:#bb98ed;display:flex;align-items:center;gap:13px;width:100%;text-align:left;background:transparent;border:0;border-bottom:1px solid #eff1f6;padding:10px 0}
+.dashboard-event-date{display:grid;place-items:center;flex:none;width:69px;min-height:43px;border-radius:9px;background:var(--tint);color:#59637a;font-size:12px;font-weight:800}
+.goal-snapshot{padding:10px 0;border-bottom:1px solid #eff1f6}
+.goal-snapshot-top{display:flex;justify-content:space-between;align-items:center;gap:9px;font-size:13px}
+.goal-snapshot .progress-track{margin-top:11px;margin-bottom:6px}
+.quick-links{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-top:20px}
+.quick-link{display:flex;flex-direction:column;gap:7px;padding:19px 16px;text-align:left;border:1px solid #e6eaf6;border-radius:12px;background:#f8f9ff}
+.quick-link:hover{background:#eef2ff}.quick-link>span{font-size:27px}.quick-link strong{font-size:13px}.quick-link small{font-size:11px;color:#8b97a7;line-height:1.4}
+.priority{display:inline-block;margin-left:9px;border-radius:7px;padding:3px 8px;font-size:10px;font-weight:800}
+.priority-high{background:#ffe8ea;color:#c76b7e}.priority-medium{background:#fff0d7;color:#ae8845}.priority-low{background:#e1f4ed;color:#4d9b86}
+.overdue-label{color:#c36f7d;font-weight:750}.task-note{margin-top:7px;color:#8490a2;line-height:1.4}
+.goals-summary{display:flex;align-items:center;gap:35px;background:#fff;border:1px solid var(--border);border-radius:16px;padding:19px 22px;margin-bottom:19px}
+.goals-summary .stat-number{color:#5d70d4}.small-numerator{font-size:20px;color:#a5acbc}
+.goals-summary-progress{flex:1;max-width:600px}
+.goal-card{--tint:#d8f3eb;--accent:#65cbb7;min-height:234px;display:flex;flex-direction:column;gap:10px}
+.goal-top{display:flex;align-items:center;gap:9px}.goal-icon{background:var(--tint);display:grid;place-items:center;width:38px;height:38px;border-radius:11px;font-size:20px}
+.goal-badge{color:#748296;font-size:11px;font-weight:750}.goal-top .task-actions{margin-left:auto}
+.goal-card h2{font-size:17px;letter-spacing:-.35px;margin:2px 0 0;overflow-wrap:anywhere}
+.goal-card .goal-notes{font-size:12px;line-height:1.5;color:#8a95a5;margin:0;overflow-wrap:anywhere}
+.goal-card .progress-track{height:10px;margin:0 0 10px}
+.goal-card .goal-snapshot-top{margin-top:auto}
+.goal-bottom{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:2px}
+.goal-deadline{font-size:11px;color:#8b98a9}
+.goal-adjust{display:flex;gap:8px}.adjust-btn{width:34px;height:34px;border:1px solid #dfe5f2;background:#fff;border-radius:9px;color:#65758e;font-weight:850;font-size:17px}
+.adjust-btn.plus{border:0;color:#fff;background:#7184e7}.adjust-btn:disabled{opacity:.35}
+.list-check-row .custom-check{margin:0}
+.meal-slot .slot-label,.meal-slot .slot-value{display:block}
+button:focus-visible,input:focus-visible{outline:3px solid #adb9ff;outline-offset:2px}
+@media(max-width:1250px){.dashboard-stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){
+  .dashboard-stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .dashboard-stat{padding:14px;min-height:112px}
+  .dashboard-stat .stat-number{font-size:29px;margin-top:13px}
+  .dashboard-stat .stat-emoji{font-size:20px;top:11px;right:11px}
+  .dashboard-stat .stat-caption{font-size:11px}
+  .goals-summary{gap:13px;align-items:center;padding:17px}
+  .goals-summary-progress{min-width:0}
+  .dashboard-panel{min-height:0}
+  .quick-links{gap:8px}
+  .quick-link{padding:15px 12px}
+  .bottom-nav button{min-width:54px;font-size:10px}
+  .goal-card{min-height:0}
+}
+@media(max-width:370px){.dashboard-stats{gap:8px}.dashboard-stat{padding:11px}.bottom-nav button{min-width:47px}}
